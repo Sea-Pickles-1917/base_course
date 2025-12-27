@@ -2,20 +2,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def func(a, b, x):
-    x = np.arange(0 , 10, 0.001)
-    if x < a:
-        return a ** 2
-    elif a <= x and x <= b:
-        return x ** 2
-    elif x > b:
-        return b ** 2
-    
-    x = np.linspace(-5, 10, 500)
-    y = func(a, b, x)
-
+def func(a, b):
+    y = []
+    x = []
+    for m in np.arange(0, 10, 0.001):
+        x.append(m)
+        if m < a:
+            y.append(a ** 2)
+        elif a <= m and m <= b:
+            y.append(m ** 2)
+        elif m > b:
+            y.append(b ** 2)
     plt.plot(x, y)
-    plt.grid(True)
     plt.savefig('func.png')
 
-func(1, 5, 7)
+func(3, 7)
