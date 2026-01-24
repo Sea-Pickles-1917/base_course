@@ -11,7 +11,7 @@ def butterfly(e=2.718):
 
 
 fig, ax = plt.subplots()
-ball, = plt.plot([], [], 'o', color='r', label='Ball')
+ball, = plt.plot([], [], '-', color='r', label='Ball')
 
 
 def animate(i):
